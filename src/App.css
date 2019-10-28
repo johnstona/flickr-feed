@@ -1,5 +1,12 @@
-#App {
+body {
   text-align: center;
+  font-family: Austin News Deck Semibold,Austin News Deck,Georgia,serif;
+  color: #333;
+  font-size: 1.25em;
+}
+
+a {
+  color: #3445ff;
 }
 
 .pictures-container {
@@ -21,15 +28,28 @@
   text-align: center;
 }
 
+.image-container {
+  padding-top: 1rem;
+  width: 100%;
+  height: 200px;
+}
+
 .image {
   position: relative;
   max-width: 95%;
-  max-height: 50%;
-  margin-top: 1rem;
+  max-height: 95%;
 }
 
 .title-and-author {
   position: relative;
   max-width: 95%;
   margin: auto;
+}
+
+select {
+    font-size: .9rem;
+    padding: 10px;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 80%;
 }
