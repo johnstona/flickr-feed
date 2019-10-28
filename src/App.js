@@ -38,12 +38,13 @@ const App = () => {
     };
   }, [])
 
-  const pics = pictures.filter(p => (p.title.length < 30 && p.author.length < 40))
-
+  const taggedPics = !currentTag ? pictures : pictures.filter(p => (p.tags.split(' ').includes(currentTag)))
+  const pics = taggedPics.filter(p => (p.title.length < 40 && p.author.length < 40))
+                        
 
   return <div className={'pictures-container'}>
     {pictures && pics.map(picture => {
-      return <PictureCard {...picture} changeTag={changeTag}/>
+      return <PictureCard {...picture} changeTag={changeTag} currentTag={currentTag}/>
     })}
   </div>
 }
