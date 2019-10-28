@@ -19,10 +19,10 @@ const PictureCard = ({media, link, title, author, author_id, description, tags, 
           </div>
           {/* <div className="description" dangerouslySetInnerHTML={{__html: `${description}`}}>
           </div> */}
-          {tags && <select name="tags" className={"tags-dropdown"} onChange={handleChange}>
+          {tags && <select name="tags" className={"tags-dropdown"} onChange={handleChange} value={currentTag}>
             <option value="">Tags:</option>
             {tags.split(" ").map(tag => {
-              return <option value={tag} selected={tag === currentTag}>{tag}</option>
+              return <option value={tag} >{tag}</option>
             })}
             </select>
           }
