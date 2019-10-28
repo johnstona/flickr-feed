@@ -26,6 +26,8 @@ a {
   width: 95%;
   height: 400px;
   text-align: center;
+  overflow-y: hidden;
+  border-radius: 3px;
 }
 
 .image-container {
