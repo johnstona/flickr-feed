@@ -11,57 +11,33 @@ const App = () => {
   const getData = () => {
     API.getPictures()
       .then(resp => {
-        setPictures([...pictures, resp.items])
+        setPictures(pictures.concat(resp.items))
       })
   }
 
-  const getMore = () => {
-    API.getPictures()
-      .then(resp => {
-        setPictures([...pictures, resp.items])
-      })
-  }
 
   useEffect(() => {
     getData()
-  }, [pictures])
+  }, [])
 
   useEffect(() => {
+    if (!loadMore) return
+    getData()
     setLoad(false)
-    getMore()
-  }, [loadMore, pictures])
+  }, [loadMore])
 
   const checkLoad = () => {
-    window.requestAnimationFrame(() => {
-      const docHeight = document.body.scrollHeight - window.innerHeight
-      const scrolled = window.pageYOffset
-      const difference = docHeight + scrolled
-      const percentage = difference / docHeight - 1
-      if (percentage > 0.5) {
-        setLoad(true)
-      }
-    })
+    if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
+    setLoad(true)
   }
 
   useEffect(() => {
-    document.addEventListener('scroll', () => checkLoad())
+    document.addEventListener('scroll', checkLoad)
     return function cleanup () {
-      document.removeEventListener('scroll', () => checkLoad())
+      document.removeEventListener('scroll', checkLoad)
     };
-  })
+  }, [])
 
-
-  // useEffect(() => {
-  //   const pictures = document.getElementById('pictures-container')
-  //   if (props.scrollable) {
-  //     pictures.addEventListener('scroll', (e) => {
-  //       const el = e.target
-  //       if (el.scrollTop + el.clientHeight === el.scrollHeight) {
-  //         setLoad(true)
-  //       }
-  //     })  
-  //   } 
-  // }, [])
 
   return <div className={'pictures-container'}>
     {pictures && pictures.map(picture => {
