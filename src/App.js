@@ -15,7 +15,6 @@ const App = () => {
       })
   }
 
-
   useEffect(() => {
     getData()
   }, [])
@@ -38,9 +37,10 @@ const App = () => {
     };
   }, [])
 
+  const pics = pictures.filter(p => (p.title.length < 30 && p.author.length < 40))
 
   return <div className={'pictures-container'}>
-    {pictures && pictures.map(picture => {
+    {pictures && pics.map(picture => {
       return <PictureCard {...picture} />
     })}
   </div>
