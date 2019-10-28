@@ -1,5 +1,5 @@
 const CORS_ANYWHERE = "https://cors-anywhere.herokuapp.com/"
-const BASE_URL = `${CORS_ANYWHERE}https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=true&safe_search=1`
+const BASE_URL = `${CORS_ANYWHERE}https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=true&safe_search=0`
 
 const getPictures = async () => {
   const res = await fetch(BASE_URL)
