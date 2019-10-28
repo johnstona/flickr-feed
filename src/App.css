@@ -1,14 +1,22 @@
+#App {
+  text-align: center;
+}
+
 .pictures-container {
-  position: absolute;
-  max-width: 100%;
-  display: flex;
+  position: relative;
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 20px;
+    justify-content: space-evenly;
 }
 
 .picture-card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   position: relative;
-  margin: 1rem;
-  width: 300px;
+  margin: auto;
+  width: 95%;
   height: 400px;
   text-align: center;
 }
@@ -18,4 +26,9 @@
   width: 95%;
   max-height: 50%;
   margin-top: 1rem;
+}
+
+.title-and-author {
+  position: relative;
+  max-width: 95%;
 }
