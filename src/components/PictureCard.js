@@ -12,6 +12,8 @@ const PictureCard = ({media, link, title, author, author_id, description, tags})
           <div className="title-and-author">
             <a href={link}>{title}</a> by <a href={`${address}${author_id}`}>{name[1]} </a>
           </div>
+          {/* <div className="description" dangerouslySetInnerHTML={{__html: `${description}`}}>
+          </div> */}
         </div>
 }
 
