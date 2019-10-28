@@ -31,4 +31,5 @@
 .title-and-author {
   position: relative;
   max-width: 95%;
+  margin: auto;
 }
