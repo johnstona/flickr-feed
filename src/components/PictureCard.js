@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PictureCard = ({media, link, title, author, author_id, description, tags, changeTag}) => {
+const PictureCard = ({media, link, title, author, author_id, description, tags, changeTag, currentTag}) => {
 
   const address = "www.flickr.com/people/"
   const photo = media.m
@@ -22,7 +22,7 @@ const PictureCard = ({media, link, title, author, author_id, description, tags, 
           {tags && <select name="tags" className={"tags-dropdown"} onChange={handleChange}>
             <option value="">Tags:</option>
             {tags.split(" ").map(tag => {
-              return <option value={tag}>{tag}</option>
+              return <option value={tag} selected={tag === currentTag}>{tag}</option>
             })}
             </select>
           }
