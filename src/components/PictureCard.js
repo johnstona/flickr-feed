@@ -2,7 +2,7 @@ import React from 'react'
 
 const PictureCard = ({media, link, title, author, author_id, description, tags, changeTag, currentTag}) => {
 
-  const address = "www.flickr.com/people/"
+  const address = "https://www.flickr.com/people/"
   const photo = media.m
   const name = author.split('"')
 
