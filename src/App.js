@@ -7,6 +7,7 @@ import PictureCard from './components/PictureCard'
 const App = () => {
   const [pictures, setPictures] = useState([])
   const [loadMore, setLoad] = useState(false)
+  const [currentTag, changeTag] = useState()
 
   const getData = () => {
     API.getPictures()
@@ -39,9 +40,10 @@ const App = () => {
 
   const pics = pictures.filter(p => (p.title.length < 30 && p.author.length < 40))
 
+
   return <div className={'pictures-container'}>
     {pictures && pics.map(picture => {
-      return <PictureCard {...picture} />
+      return <PictureCard {...picture} changeTag={changeTag}/>
     })}
   </div>
 }
