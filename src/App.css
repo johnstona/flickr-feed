@@ -11,12 +11,12 @@ a {
 
 .pictures-container {
   position: relative;
-    display: grid;
-    width: 100%;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, 300px);
-    grid-gap: 20px;
-    justify-content: space-evenly;
+  display: grid;
+  width: 100%;
+  margin: 1rem auto;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 20px;
+  justify-content: space-evenly;
 }
 
 .picture-card {
