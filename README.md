@@ -18,7 +18,7 @@ $ yarn start
 
 ## Features
 
-flickr-feed will automatically load the latest photos uploaded to Flickr.
+flickr-feed will automatically display the latest safe photos uploaded to Flickr.
 
 There is the option to visit the photo page or the author's page using the links in the photo card.
 
