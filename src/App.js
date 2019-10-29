@@ -19,8 +19,10 @@ const App = () => {
   }
 
   const searchByTag = (tag) => {
+    setPictures([])
     toggleSearch(true)
     updateCurrentSearch(tag)
+    window.scrollTo(0, 0)
     API.getTaggedPics(tag)
       .then(resp => {
         setPictures(resp.items)

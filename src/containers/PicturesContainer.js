@@ -4,6 +4,7 @@ import PictureCard from '../components/PictureCard'
 const PicturesContainer = ({pictures, changeTag, currentTag}) => {
 
   return <div className={'pictures-container'}>
+            {!pictures.length && 'Loading...'}
             {pictures.map(picture => {
             return <PictureCard {...picture} changeTag={changeTag} currentTag={currentTag}/>
             })}
