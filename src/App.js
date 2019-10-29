@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import API from '../src/adapters/API'
-import PictureCard from './components/PictureCard'
 import SearchBar from './components/SearchBar'
+import PicturesContainer from './containers/PicturesContainer'
 
 const App = () => {
   const [pictures, setPictures] = useState([])
@@ -65,14 +65,8 @@ const App = () => {
                         
 
   return <>
-          <div className={'search-bar'}>
           <SearchBar search={searchByTag} currentSearch={currentSearch} />
-          </div>
-          <div className={'pictures-container'}>
-              {pictures && pics.map(picture => {
-              return <PictureCard {...picture} changeTag={changeTag} currentTag={currentTag}/>
-           })}
-          </div>
+          <PicturesContainer pictures={pics} changeTag={changeTag} currentTag={currentTag} />
         </>
 }
 
