@@ -1,6 +1,6 @@
 # flickr-feed
 
-A simple app created to display photos from the Flickr api.
+A single-page app created to display photos from the Flickr api.
 
 ## Technologies
 
