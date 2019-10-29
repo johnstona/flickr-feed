@@ -13,16 +13,11 @@ export const useForm = (callback, initialValues) => {
     setInput({ ...input, [name]: value })
   }
 
-  const handleDropdownChange = (e, { name, value }) => {
-    setInput({ ...input, [name]: value })
-  }
-
   return {
     handleChange,
     input,
     setInput,
-    handleSubmit,
-    handleDropdownChange
+    handleSubmit
   }
 }
 
