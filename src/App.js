@@ -66,7 +66,7 @@ const App = () => {
 
   return <>
           <div className={'search-bar'}>
-          <SearchBar search={searchByTag} currentSearch={currentSearch}/>
+          <SearchBar search={searchByTag} currentSearch={currentSearch} />
           </div>
           <div className={'pictures-container'}>
               {pictures && pics.map(picture => {

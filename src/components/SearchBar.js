@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from '../hooks/useForm'
 
-const SearchBar = ({ search, currentSearch }) => {
+const SearchBar = ({ search, currentSearch, clear }) => {
 
   const callback = () => {
     search(input.searchTerm)

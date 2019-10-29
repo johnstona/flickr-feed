@@ -3,6 +3,7 @@ body {
   font-family: Austin News Deck Semibold,Austin News Deck,Georgia,serif;
   color: #333;
   font-size: 1.25em;
+  background-color: #eaf9f8
 }
 
 a {
@@ -17,7 +18,7 @@ input {
 }
 
 button {
-  background-color: rgb(223, 121, 43);
+  background-color: #ffad73;
   border: none;
   color: white;
   padding: 5px;
@@ -32,13 +33,13 @@ button {
   top: 0;
   display: block;
   z-index: 2;
-  background: white;
+  background: #eaf9f8;
   width: 100%;
 }
 
 .search-form {
   position: relative;
-  background: white;
+  background: #eaf9f8;
   height: 100%;
   margin: 1rem;
 }
@@ -47,7 +48,7 @@ button {
   position: relative;
   display: grid;
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 6rem;
   grid-template-columns: repeat(auto-fit, 300px);
   grid-gap: 20px;
   justify-content: space-evenly;
@@ -55,6 +56,7 @@ button {
 
 .picture-card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: whitesmoke;
   position: relative;
   margin: auto;
   width: 95%;
@@ -81,8 +83,9 @@ button {
 .title-and-author {
   position: relative;
   max-width: 95%;
-  height: 15%;
+  height: 18%;
   margin: auto;
+  overflow: hidden;
 }
 
 select {
